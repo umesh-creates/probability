@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: grid;
+            justify-content: center;
+        }
+
+        .container,
+        nav, #navbar {
+            width: 500px;
+        }
+
+        #navbar {
+            background-color: rgb(240, 240, 240);
+            border-radius: 12px;
+            border: 1px solid black;
+            position: fixed;
+            overflow: hidden;
+            z-index: 100;
+            left: 50%;
+            top: 1px;
+            transform: translate(-50%);
+        }
+
+        nav ul {
+            margin-top: 10px;
+        }
+
+        #div {
+            width: 100%;
+            height: 30px;
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            cursor: pointer;
+
+        }
+
+        #div .btn1 {
+            background-color: rgb(235, 235, 235);
+            border-right: 1px solid black;
+        }
+
+        #div .btn2 {
+            background-color: rgb(255, 247, 247);
+        }
+
+        #div .btn1,
+        .btn2 {
+            display: grid;
+            place-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        @media (max-width: 530px) {
+
+            .container {
+                width: 90vw;
+            }
+            #navbar{
+                width: 90vw;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .formula {
+                overflow-y: auto;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="div">
+            <div class="btn btn1">Go To Top</div>
+            <div class="btn btn2">Index</div>
+        </div>
+        <ul id="index">
+            <li><a href="#probability">Probability</a></li>
+            <li><a href="#complementary-probability">Complementary Probability</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#probability-combination">Probability Combination</a></li>
+            <li><a href="#add-theorem">Probability Addition Theorem</a></li>
+            <li><a href="#addition-3-events">Probability Addition Theorem 3 Events</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 id="probability">📝 Probability</h1>
+        <p>Probability is the measure of chance of an event happening.</p>
+        <h4>Formula :</h4>
+        <div class="formula">\[P(E) = \frac{Favourable\ Outcome}{Total\ Outcome}\]</div>
+        <p>P = Probability</p>
+        <p>E = Event</p>
+        <h4>Example : Coin Toss</h4>
+        <p>Possible Outcome = {H, T} = 2</p>
+        <p>Probability of Head = {H} = 1</p>
+        <div class="formula">\[P(Head) = \frac{1}{2}\]</div>
+        <h4>Example : Dice Through</h4>
+        <p>Possible Outcome = {1, 2, 3, 4, 5, 6} = 6</p>
+        <p>Probability of 4 Number = {4} = 1</p>
+        <div class="formula">\[P(4) = \frac{1}{6}\]</div>
+        <p>Probability of Even Number = {2, 4, 6} = 3</p>
+        <div class="formula">\[P(Even) = \frac{3}{6} = \frac{1}{2}\]</div>
+        <hr>
+        <h3>Important Rule</h3>
+        <h4>Probability always : </h4>
+        <div class="formula">\[0 >= P(E) <= 1\]</div>
+                <P>0 = Impossible Outcome</P>
+                <p>1 = Certain Outcome</p>
+                <p>0.5 = 50% Chance</p>
+                <h4>Probability in Percentage :</h4>
+                <div class="formula">\(Probability\ in\ Percentage = P(E) \times 10\ 0\)</div>
+                <h3>Example : </h3>
+                <div class="formula">\[\frac{1}{2} \times 10\ 0 = 5\ 0\ \%\]</div>
+                <hr>
+                <h2 id="complementary-probability">Complementary Probability</h2>
+                <p>Probability that an event does <b>NOT</b> happen.</p>
+                <h3>Formula :</h3>
+                <div class="formula">\[P(E^c) = 1 - P(E)\]</div>
+                <h3>Example : </h3>
+                <p>5 Red, 10 Yellow balls in the Box</p>
+                <p>Possible Outcome = {Red = 5 + Yellow = 10} = 15</p>
+                <p>Favourable Outcome of Red = 5</p>
+                <div class="formula">\[P(Red) = \frac{5}{15} = \frac {1}{3}\]</div>
+                <p>Favourable Outcome of Yellow = 10</p>
+                <div class="formula">\[P(Yellow) = \frac{10}{15} = \frac{2}{3}\]</div>
+                <p>Favourable Outcome of <b>NOT Red</b> = <br>Total Outcome(15) - Red(5) = 10</p>
+                <h4>1 way : </h4>
+                <div class="formula">\[P(NOT\ Red) = \frac {10}{15} = \frac{2}{3}\]</div>
+                <h4>Best way : </h4>
+                <div class="formula">\[P(Red^c) = 1 - P(Red)\]</div>
+                <div class="formula">\[P(Red^c) = 1 - \frac{\ 1}{3}\]</div>
+                <div class="formula">\[P(Red^c) = \frac{3}{3} - \frac{\ 1}{3}\]</div>
+                <div class="formula">\[P(Red^c) = \frac{3}{3} - \frac{\ 1}{3} = \frac{2}{3}\]</div>
+                <h3>Note: </h3>
+                <h4>P(Not Red) = P(Yellow)</h4>
+                <hr>
+                <h1 id="cards">Cards</h1>
+                <a href="cards explaing.pdf" target="_blank">open pdf</a>
+                <hr>
+                <h2>Examples : </h2>
+                <h3>1. Red card probability</h3>
+                <div class="formula">\[P(Red\ Card) = \frac{26}{52} = \frac{1}{2}\]</div>
+                <h3>2. King probability</h3>
+                <div class="formula">\[P(King) = \frac{4}{52} = \frac{1}{13}\]</div>
+                <h3>3. Face card probability</h3>
+                <div class="formula">\[P(Face\ Card) = \frac{12}{52} = \frac{3}{13}\]</div>
+                <h3>4. Not a face card</h3>
+                <div class="formula">\[P(Face\ card^c) = 1 - P(Face\ Card)\]</div>
+                <div class="formula">\[P(Face\ card^c) = 1 - \frac{12}{52} = \frac{10}{13}\]</div>
+                <hr>
+                <h1 id="probability-combination">Probability Combination</h1>
+                <p>Selecting objects where order does NOT matter.</p>
+                <h3>Example:</h3>
+                <p>From A, B, C choose 2 people:</p>
+                <ul>
+                    <li>AB</li>
+                    <LI>BC</LI>
+                    <LI>AC</LI>
+                </ul>
+                <p>Here AB and BA are considered the same because only selection matters.</p>
+                <hr>
+                <h2>Combination Formula</h2>
+                <div class="formula">\[{}^nC_r = \frac{n!}{r!(n-r)!}\]</div>
+                <p>where </p>
+                <ul>
+                    <li>\(n\) = Total Objects</li>
+                    <li>\(r\) = Selected Objects</li>
+                    <li>\(!\) = Factorial</li>
+                </ul>
+                <hr>
+                <h2>Simple Example</h2>
+                <h3>Question</h3>
+                <p>In how many ways can 2 students be selected from 5 students?</p>
+                <h3>Solution</h3>
+                <p>This is a combination because order does not matter.</p>
+                <div class="formula">\[{}^5C_2= \frac{5!}{2!(5-2)!}\]</div>
+                <div class="formula">\[= \frac{5 \times 4 \times 3!}{2 \times 1 \times 3!}\]</div>
+                <div class="formula">\[= 10\]</div>
+                <hr>
+                <h2>Questions</h2>
+                <ul style="list-style: decimal;">
+                    <li> A bag contains 5 green balls and 7 red balls. <br>
+                        Two balls are drawn. Find the probability that one ball is red and one ball is green.</li>
+                    <h3>Solution</h3>
+                    <p>bag = 5 Green + 7 Red balls</p>
+                    <p>2 drawn = 1 Green + 1 Red</p>
+                    <h3>formula: </h3>
+                    <div class="formula">\[P(1 Green\ and\ 1 Red) = \frac{{}^5C_1 \times {}^7C_1}{{}^{12}C_2}\]</div>
+                    <div class="formula">\[= \frac{\frac{5 \times 4!}{1 \times 4!} \times \frac{7 \times 6!}{1 \times
+                        6!}}{\frac{12 \times 11 \times 10!}{2 \times 1 \times 10!}}\]</div>
+                    <div class="formula">\[=\frac{5 \times 7}{6 \times 11} = \frac{35}{66}\]</div>
+                    <hr>
+                    <li>From a standard deck of 52 cards, 2 cards are selected.
+                        Find the probability that one card is a king and the other is a queen.</li>
+                    <h3>Solution : </h3>
+                    <p>52 Cards = 2</p>
+                    <p>2 = 1 King + 1 Queen</p>
+                    <div class="formula">\[P(1 King\ and\ 1 Queen)= \frac{{}^4C_1 \times {}^4C_1}{{}^{52}C_2}\]</div>
+                    <div class="formula">\[= \frac{4 \times 4}{\frac{52 \times 51\times 50!}{2 \times 1 \times 50!}}\]
+                    </div>
+                    <div class="formula">\[= \frac{16}{1326}\]</div>
+                    <hr>
+                    <li>A bag contains: <br>
+                        <ul>
+                            <li>9 red balls</li>
+                            <li>7 white balls</li>
+                            <li>4 green balls</li>
+                        </ul>
+                        Three balls are drawn.
+                        Find the probability that one ball is red, one is white, and one is green.
+                    </li>
+                    <h3>Solution</h3>
+                    <p>Bag = 9 Red + 7 White + 4 Green</p>
+                    <p>3 = 1 Red + 1 White + 1 Green</p>
+                    <h3>Formula : </h3>
+                    <div class="formula">\[P(1 Red,\ 1 White,\ 1 Green) = \frac{{}^9C_1 \times {}^7C_1 \times
+                        {}^4C_1}{{}^{20}C_3}\]</div>
+                    <div class="formula">\[= \frac{9 \times 7 \times 4}{\frac{20 \times 19 \times 18\times 17!}{3 \times
+                        2 \times 1 \times 17!}}\]</div>
+                    <div class="formula">\[= \frac{252}{1140}\]</div>
+                </ul>
+                <hr>
+                <h1 id="add-theorem">Probability Addition Theorem</h1>
+                <p>The Probability Addition Theorem is a formula used to find the probability of:
+                    <br> <b>“Event A or Event B happening.”</b>
+                </p>
+                <p>It means:</p>
+                <ul>
+                    <li>A happens</li>
+                    <li>or B happens</li>
+                    <li>or both happen</li>
+                </ul>
+                <p>Symbol</p>
+                <ul>
+                    <li>\(\cup = Or (Union)\)</li>
+                    <li>\(\cap = And (Intersection)\)</li>
+                </ul>
+                <hr>
+                <h2>Mutually Exclusive Events :</h2>
+                <p>If two events cannot happen together, then:</p>
+                <div class="formula">\[P(A \cap B)=0\]</div>
+                <p>So the formula becomes:</p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B)\]</div>
+                <p>Examples : </p>
+                <ul>
+                    <li>Getting <b>Head</b> and <b>Tail</b> together in one coin toss is impossible.</li>
+                </ul>
+                <hr>
+                <h2>Non-Mutually Exclusive Events :</h2>
+                <p>events that can happen together at the same time, then:</p>
+                <div class="formula">\[P(A \cap B) \neq 0\]</div>
+                <p>So the formula becomes:</p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
+                <p>Example : </p>
+                <p>King card is Face card and King card as well.</p>
+                <hr>
+                <h2>Practice </h2>
+                <h3>Practice 1 :</h3>
+                <h3>\(P(King \cup Queen) =\ ?\)</h3>
+                <h3>Solution :</h3>
+                <p>King and Queen are <b>Mutually Exclusive</b> Events.</p>
+                <p>Total cards = 52</p>
+                <p>King = 4</p>
+                <p>Queen = 4</p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B)\]</div>
+                <div class="formula">\[= \frac{4}{52} + \frac{4}{52}\]</div>
+                <div class="formula">\[\frac{8}{52} = \frac{2}{13}\]</div>
+                <hr>
+                <h3>Practice 2:</h3>
+                <h3>die Through : </h3>
+                <div class="formula">\(P(3 \cup 5) = ?\)</div>
+                <p>in single die 3 and 5 are <b>Mutually Exclusive</b> Events.</p>
+                <div class="formula">\[P(3 \cup 5) = \frac{1}{6} + \frac{1}{6}\]</div>
+                <div class="formula">\[= \frac{2}{6} = \frac{1}{3}\]</div>
+                <hr>
+                <h3>Practice 3: </h3>
+                <p>Numbers from 1 to 30 are written on separate slips and one slip is selected at random.</p>
+                <p>Find the probability that the selected number is:</p>
+                <ul>
+                    <li>a multiple of 5</li>
+                    <li>or a multiple of 6.</li>
+                </ul>
+                <h3>Solution :</h3>
+                <p><b>A = 5</b> = {5, 10, 15, 20, 25, 30} = 6</p>
+                <p><b>B = 6</b> = {6, 12, 18, 24, 30} = 5</p>
+                <p><b>Intersection = </b> 30 = 1</p>
+                <p>A and B are <b>Non-Mutually Exclusive Events</b></p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
+                <div class="formula">\[P(A \cup B) = \frac{6}{30} + \frac{5}{30} - \frac{1}{30}\]</div>
+                <div class="formula">\[= \frac{6 + 5 - 1}{30}\]</div>
+                <div class="formula">\[\frac{10}{30} = \frac{1}{3}\]</div>
+                <hr>
+                <h3>Practice 4:</h3>
+                <p>One card is drawn at random from a standard deck of 52 cards.</p>
+                <p>Find the probability that the selected card is:</p>
+                <ul>
+                    <li>an Ace,</li>
+                    <li>a King,</li>
+                    <li>a Queen,</li>
+                    <li>or a Club</li>
+                </ul>
+                <h4>Non-Mutually Exclusive Events</h4>
+                <p><b>A =</b> Ace 4 + King 4 + Queen 4 = 12</p>
+                <p><b>B =</b> Clubs = 13</p>
+                <p><b>Intersection =</b> Ace 1 + King 1 + Queen 1 = 3</p>
+                <div class="formula">\[P(A \cup B) = \frac{12}{52} + \frac{13}{52} - \frac{3}{52}\]</div>
+                <div class="formula">\[= \frac{12 + 13 - 3}{52}\]</div>
+                <div class="formula">\[= \frac{22}{52} = \frac{11}{26}\]</div>
+                <hr>
+                <h3>Problem 5:</h3>
+                <p>\(P(A) = 0.3\)</p>
+                <p>\(P(A \cup B) = 0.5\)</p>
+                <p>\(P(B) = ?\)</p>
+                <p>\(P(A \cup B) = Mutually\ Exclusive\)</p>
+                <h3>Solution :</h3>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B)\]</div>
+                <div class="formula">\[0.5 = 0.3 + P(B)\]</div>
+                <div class="formula">\[P(B) = 0.5 - 0.3\]</div>
+                <div class="formula">\[P(B) = 0.2\]</div>
+                <hr>
+                <h3>Problem 6</h3>
+                <p>
+                    A box contains 30 balls numbered from 1 to 30. One ball is selected at random.
+                </p>
+                <p>
+                    Find the probability that the selected number is:
+                </p>
+                <ul>
+                    <li>a multiple of 5</li>
+                    <li>or a multiple of 8</li>
+                </ul>
+                <h3>Solution :</h3>
+                <p><b>A = </b>5 = {5, 10, 15, 20, 25, 30} = 6</p>
+                <p><b>B = </b>8 = {8, 16, 24} = 3</p>
+                <p>A and B are <b>Mutually Exclusive Events</b></p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B)\]</div>
+                <div class="formula">\[= \frac{6}{30} + \frac{3}{30}\]</div>
+                <div class="formula">\[= \frac{6 + 3}{30}\]</div>
+                <div class="formula">\[\frac{9}{30} = \frac{3}{10}\]</div>
+                <hr>
+                <h3>Problem 7</h3>
+                <ol type="I">
+                    <li>Either King or Queen</li>
+                    <li>Either King or Black Card</li>
+                </ol>
+                <h3>Solution :</h3>
+                <p>I. Mutually Exclusive</p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B)\]</div>
+                <div class="formula">\[= \frac{4}{52} + \frac{4}{52}\]</div>
+                <div class="formula">\[\frac{8}{52} = \frac{2}{13}\]</div>
+                <p>II Non-Mutually Exclusive</p>
+                <div class="formula">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
+                <div class="formula">\[P(A \cup B) = \frac{4}{52} + \frac{26}{52} - \frac{2}{52}\]</div>
+                <div class="formula">\[P(A \cup B) = \frac{4 + 26 - 2}{52}\]</div>
+                <div class="formula">\[= \frac{28}{52} = \frac{7}{13}\]</div>
+                <hr>
+                <h2 id="addition-3-events">Probability of Addition Theorem of 3 Events</h2>
+                <h3>Formula :</h3>
+                <h3>Mutually Exclusive :</h3>
+                <div class="formula">\(P(A \cup B \cup C) = P(A) + P(B) + P(C)\)</div>
+                <h3>Non-Mutually Exclusive</h3>
+                <div class="formula">\(P(A \cup B \cup C) = P(A) + P(B) + P(C)\)</div>
+                <div class="formula">\[ - P(A \cap B) - P(B \cap C) - P(C \cap A)\]</div>
+                <div class="formula">\[+ P(A \cap B \cap C)\]</div>
+                <hr>
+                <h3>Problem 1</h3>
+                <p>A number is selected at random from the numbers 1 to 50. Find the probability that the selected
+                    number is divisible by 2, 3, or 10.
+                </p>
+                <h3>Solution :</h3>
+                <p><b>A = </b>{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46,
+                    48, 50} = 25</p>
+                <p><b>B = </b>{3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48} = 16</p>
+                <p><b>C = </b>{10, 20, 30, 40, 50} = 5</p>
+                <p>\(A \cap B = 8\)</p>
+                <p>\(B \cap C = 1\)</p>
+                <p>\(C \cap A = 5\)</p>
+                <p>\(A \cap B \cap C = 1\)</p>
+                <h3>Non-Mutually Exclusive</h3>
+                <div class="formula">\(P(A \cup B \cup C) = \frac{25}{50} + \frac{16}{50} + \frac{5}{50}\)</div>
+                <div class="formula">\[- \frac{8}{50} - \frac{1}{50} - \frac{5}{50}\]</div>
+                <div class="formula">\[+ \frac{1}{50}\]</div>
+                <div class="formula">\[= \frac{25 + 16 + 5 - 8 - 1 - 5 + 1}{50}\]</div>
+                <div class="formula">\[= \frac{33}{50}\]</div>
+                <hr>
+                <h3>Problem 2</h3>
+                <p>
+                    A number is selected at random from the numbers 1 to 30. Find the probability that the selected
+                    number is divisible by 7, 11, or 13.
+                </p>
+                <h3>Solution :</h3>
+                <p><b>A =</b> {7, 14, 21, 28} = 4</p>
+                <p><b>B = </b>{11, 22} = 2</p>
+                <p><b>C = </b>{13, 26} = 2</p>
+                <h3>Mutually Exclusive</h3>
+                <div class="formula">\(P(A \cup B \cup C) = \frac{4}{30} + \frac{2}{30} + \frac{2}{30}\)</div>
+                <div class="formula">\[= \frac{4 + 2 + 2}{30}\]</div>
+                <div class="formula">\[= \frac{8}{30} = \frac{4}{15}\]</div>
+                <hr>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="script.js"></script>
+
+</html>
