@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumulative Distribution Function - CDF</title>
+    <link rel="stylesheet" href="style_formate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+<h1>Cumulative Distribution Function - CDF</h1><hr>
+<h2><h1>Probablity Mass Functionn (Discrete value)</h1>
+<hr>
+<p><b>"किसी मान तक की कुल (जमा हुई) probability"</b></p>
+<div class="formula">\[F(x) = P(X ≤ x)\]</div>
+<p>अर्थात् x से छोटी या x के बराबर सभी values की probabilities का योग।</p>
+<hr>
+<h3>Example</h3>
+<p>मान लो किसी Random Variable X की Probability Distribution यह है:</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>X</th>
+            <th>P(X)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0.3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>0.1</td>
+        </tr>
+    </tbody>
+</table>
+<p>Probability का कुल योग:</p>
+<p>0.2 + 0.3 + 0.4 + 0.1 = 1 ✔</p>
+<hr>
+<h2>CDF कैसे निकालते हैं?</h2>
+<div class="formula">\[0 + 1 + (01+2) + (012 + 3) = CDF\]</div>
+<div class="formula">\[F(0) = 0.2\]</div>
+<div class="formula">\[F(1) = F(0) + F(1) = 0.5\]</div>
+<div class="formula">\[F(2) = F(1) + F(2) = 0.9\]</div>
+<div class="formula">\[F(3) = F(2) + F(3) = 1.0\]</div>
+<hr>
+<h2>इसका अर्थ क्या है?</h2>
+<p><b>\(F(1) = 0.5\)</b></p>
+<p>इसका अर्थ:</p>
+<p><b>X का मान 1 या उससे कम आने की probability 0.5 है।</b></p>
+<hr>
+<p><b>\(F(2) = 0.9\)</b></p>
+<p>इसका अर्थ:</p>
+<p><b>X का मान 2 या उससे कम आने की probability 0.9 है।</b></p>
+<hr>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

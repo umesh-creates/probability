@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probablity Distribution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_formate.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Probability Distribution</h1>
+        <hr>
+        <h1>Probablity Mass Functionn (Discrete value)</h1>
+        <hr>
+        <h2>Probability Distribution क्या होता है?</h2>
+        <p>किसी random experiment के सभी possible outcomes की probability को व्यवस्थित तरीके से लिखना ही probability
+            distribution कहलाता है।</p>
+        <hr>
+        <h3>सबसे आसान उदाहरण</h3>
+        <p>एक coin toss किया।</p>
+        <p>Possible outcomes:</p>
+        <ul>
+            <li>Head</li>
+            <li>Tail</li>
+        </ul>
+        <p>दोनों की probability:</p>
+        <div class="formula">\[P(H) = \frac{1}{2}\]</div>
+        <div class="formula">\[P(H) = \frac{1}{2}\]</div>
+        <p>यही एक simple probability distribution है।</p>
+        <hr>
+        <h2>Random Variable क्या होता है?</h2>
+        <p>Outcome को number देना।</p>
+        <p>मान लो:</p>
+        <ul>
+            <li>Head = 0</li>
+            <li>Tail = 1</li>
+        </ul>
+        <p>अब X एक random variable है।</p>
+        <p>तो distribution:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">X</th>
+                    <th scope="col">P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">0</th>
+                    <td>1\2</td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>1\2</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>Dice वाला उदाहरण</h2>
+        <p>एक die throw किया।</p>
+        <p>Possible values:</p>
+        <div class="center">
+            <p>1, 2, 3, 4, 5, 6</p>
+        </div>
+        <p>हर value की probability:</p>
+        <div class="formula">\[\frac{1}{6}\]</div>
+        <p>Distribution:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">X</th>
+                    <th scope="col">P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>1\6</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>1\6</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>1\6</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>1\6</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>1\6</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>1\6</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>Important Rules</h2>
+        <hr>
+        <h3>Rule 1</h3>
+        <p>हर probability:</p>
+        <div class="formula">\[0 \leq P(X) \leq 1\]</div>
+        <hr>
+        <h2>Rule 2</h2>
+        <p>Rule 2</p>
+        <p>सभी probabilities का total:</p>
+        <p>Dice में:</p>
+        <div class="formula">\[\frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = 1\]
+        </div>
+        <hr>
+        <h2>2 Coins वाला Example</h2>
+        <p>दो coins toss किए।</p>
+        <p>Possible outcomes:</p>
+        <div class="center">
+            <p>HH, HT <br>
+               TH, TT</p>
+        </div>
+        <p>अब define करो:</p>
+        <div class="center">
+            <p>X = number of heads</p>
+        </div>
+        <p>तो distribution:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>0</th>
+                    <td>1\4</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>2\4</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>1\4</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h3>Question</h3>
+        <p>Three coins are tossed simultaneously. <br>
+            Let X be the number of heads obtained. <br>
+            Find the probability distribution of X.</p>
+        <h3>Solution</h3>
+        <p>Possible outcomes:</p>
+        <div class="center">
+            <p>HHH, HHT, HTH, HTT <br>
+               THH, HHT, HTH, HTT</p>
+        </div>
+        <div class="center">
+            <p>X = number of heads</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>0</th>
+                    <td>1\8</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>3\8</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>3\8</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>1\8</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>varify करते है </p>
+        <div class="formula">\[\frac{1}{8} + \frac{3}{8} + \frac{3}{8} + \frac{1}{8} = 1\]</div>
+        <hr>
+        <h3>Question</h3>
+        <p>A die is thrown once. <br>
+            Let X be the number of times 4 appears. <br>
+            Find the probability distribution of X.</p>
+        <h3>Solution</h3>
+        <p>Possible Outcomes:</p>
+        <div class="center">
+            <p>X = Numbers of 4</p>
+        </div>
+        <div class="center">
+            <p>1, 2, 3, 4, 5, 6</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>0</th>
+                    <td>5\6</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>1\6</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Varify करते है</p>
+        <div class="formula">\[\frac{5}{6} + \frac{1}{6} = 1\]</div>
+        <hr>
+        <h3>Question</h3>
+        <p>Two dice are thrown simultaneously. <br>
+            Let X be the number of times 6 appears. <br>
+            Find the probability distribution of X.</p>
+        <h3>Solution</h3>
+        <p>Possible Outcome:</p>
+        <div class="center">
+            <p>X = Numbers of 6</p>
+        </div>
+        <div class="center">
+            <p>11, 12, 13, 14, 15, 16 <br>
+                21, 22, 23, 24, 25, 26 <br>
+                31, 32, 33, 34, 35, 36 <br>
+                41, 42, 43, 44, 45, 46 <br>
+                51, 52, 53, 54, 55, 56 <br>
+                62, 62, 63, 64, 65, 66 </p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>P(X)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>0</th>
+                    <td>25/36</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>10/36</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>1/36</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>varify करते है</p>
+        <div class="formula">\[\frac{25}{36} + \frac{10}{36} + \frac{1}{36} = \frac{36}{36}\]</div>
+<hr>
+<h3>Question</h3>
+<p>Three dice are thrown simultaneously. <br>
+Let X be the number of times 3 appears. <br>
+Find the probability distribution of X.</p>
+<h3>Solution</h3>
+<p>Possible Outcome:</p>
+<div class="center"><p>X = Numbers of 3</p></div>
+<div class="formula" style="font-size: 22px;">\[P(X = x) = {}^nC_x\ p^x\ q^{n-x}\]</div>
+<hr>
+<div class="formula">\[P(X = 0) = {}^3C_0 \times \left( \frac{1}{6} \right)^0 \times \left( \frac{5}{6} \right)^{3-0}\]</div>
+<div class="formula">\[= 1 \times 1 \times \frac{5}{6} \times \frac{5}{6} \times \frac{5}{6}\]</div>
+<div class="formula">\[P(X = 0) = \frac{125}{216}\]</div>
+<hr>
+<div class="formula">\[P(X = 1) = {}^3C_1 \times \left( \frac{1}{6} \right)^1 \times \left( \frac{5}{6} \right)^{3-1}\]</div>
+<div class="formula">\[= 3 \times \frac{1}{6} \times \frac{5}{6} \times \frac{5}{6}\]</div>
+<div class="formula">\[P(X = 1) = \frac{75}{216}\]</div>
+<hr>
+<div class="formula">\[P(X = 2) = {}^3C_2 \times \left( \frac{1}{6} \right)^2 \times \left( \frac{5}{6} \right)^{3-2}\]</div>
+<div class="formula">\[= 3 \times \frac{1}{6} \times \frac{1}{6} \times \frac{5}{6}\]</div>
+<div class="formula">\[P(X = 2) = \frac{15}{216}\]</div>
+<hr>
+<div class="formula">\[P(X = 3) = {}^3C_3 \times \left( \frac{1}{6} \right)^3 \times \left( \frac{5}{6} \right)^{3-3}\]</div>
+<div class="formula">\[= 1 \times \frac{1}{6} \times \frac{1}{6} \times \frac{1}{6} \times 1\]</div>
+<div class="formula">\[P(X = 3) = \frac{1}{216}\]</div>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>X</th>
+            <th>P(X)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>0</th>
+            <td>125\216</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>75\216</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>15\216</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>1\216</td>
+        </tr>
+    </tbody>
+</table>
+<p>Let's varify</p>
+<div class="formula">\[\frac{125}{216} \times \frac{75}{216} \times \frac{15}{216} \times \frac{1}{216} = \frac{216}{216} = 1\]</div>
+<hr>
+<h3>Question</h3>
+<p>Two cards are drawn simultaneously from a standard deck of 52 cards. <br>
+Let X be the number of Kings obtained. <br>
+Find the probability distribution of X.</p>
+<h3>Solution</h3>
+<div class="center"><p>X = Numbers of 2 Kings</p></div>
+<p><b>King = 0</b></p>
+<p><b>48 non-King cards में से 2 चुनो:</b></p>
+<div class="formula">\[P(X = 0) = \frac{{}^{48}C_2}{{}^{52}C_2}\]</div>
+<div class="formula">\[P(X = 0)= \frac{{\frac{48 \times 47 \times 46!}{46! \times 2 \times 1}}}{\frac{52 \times 51 \times 50!}{50! \times 2 \times 1}} = \frac{1128}{1326}\]</div>
+<hr>
+<p><b>ठीक 1 King।</b></p>
+<p><b>1 King और 1 non-King:</b></p>
+<div class="formula">\[P(X = 1) = \frac{{}^4C_1\ {}^{52 - 4}C_1}{{}^{52}C_2}\]</div>
+<div class="formula">\[P(X = 1) = \frac{4 \times 48}{1326} = \frac{192}{1326}\]</div>
+<hr>
+<p><b>दोनों King।</b></p>
+<div class="formula">\[P(X = 2) = \frac{{}^4C_2}{{}^{52}C_2} = \frac{6}{1326}\]</div>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>X</th>
+            <th>P(X)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>0</th>
+            <td>1128\1326</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>192\1326</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>6\1326</td>
+        </tr>
+    </tbody>
+</table>
+<p>Verification</p>
+<div class="formula">\[\frac{1128 + 192 + 6}{1326} = \frac{1326}{1326} = 1\]</div>
+<hr>
+
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

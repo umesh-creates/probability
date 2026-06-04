@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean & Variance & Standard Deviation of Probablity Distribution</title>
+    <link rel="stylesheet" href="style_formate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>Mean & Variance & Standard Deviation of Probability Distribution</h1><hr>
+    <h1>Probablity Mass Functionn (Discrete value)</h1><hr>
+    <h2>Mean (Expected Value)</h2>
+    <p>Mean का मतलब है average value जो हम expect करते हैं।</p>
+    <h3>formula</h3>
+    <div class="formula">\[E(X) = \sum x P(X)\]</div>
+    <div class="center">Expected Value of X = Sum of [X × Probability of X]</div>
+    <hr><h3>Example</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>X</th>
+            <th>P(X)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>0</th>
+            <td>1\8</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>3\8</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>3\8</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>1\8</td>
+        </tr>
+    </tbody>
+</table>
+<div class="formula">\[E(X) = \sum x P(X)\]</div>
+<div class="formula">\[= 0 \left( \frac{1}{8} \right) + 1 \left( \frac{3}{8} \right) + 2 \left( \frac{3}{8} \right) + 3 \left( \frac{1}{8} \right)\]</div>
+<div class="formula">\[= \frac{0 + 3 + 6 + 3}{8} = \frac{12}{8}\]</div>
+<div class="formula">\[= \frac{3}{2} = 1.5\]</div>
+<hr>
+<h2>Variance</h2>
+<p>the spread of the possible outcomes around the expected value (mean).</p>
+<ul>
+    <li>Variance बड़ा ⇒ मान अधिक फैले हुए हैं।</li>
+    <li>Variance छोटा ⇒ मान Mean के पास हैं।</li>
+</ul>
+<hr>
+<h3>Variance का सूत्र</h3>
+<div class="formula">\[Var(X)=E(X^2)-[E(X)]^2\]</div>
+<p>इसके लिए पहले \(E(X^2)\) निकालना पड़ता है।</p>
+<hr>
+<p>\(E(X^2)\) का सूत्र</p>
+<div class="formula">\[E(X^2) = \sum x^2 P(x)\]</div>
+<div class="center">Expected Value of X^2 = Sum of [x^2 × Probability of X]</div>
+<hr>
+<h4>उसी उदाहरण से</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>X</th>
+            <th>P(X)</th>
+            <th>\(x^2\)</th>
+            <th>\(x^2P(x)\)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>0</th>
+            <td>1\8</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>3\8</td>
+            <td>1</td>
+            <td>3\8</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>3\8</td>
+            <td>4</td>
+            <td>12\8</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>1\8</td>
+            <td>9</td>
+            <td>9\8</td>
+        </tr>
+    </tbody>
+</table>
+<div class="formula">\[E(X^2) = 0 + \frac{3}{8} + \frac{12}{8} + \frac{9}{8}\]</div>
+<div class="formula">\[E(X^2) = \frac{24}{8} = 3\]</div>
+<hr>
+<div class="formula">\[Var(X) = 3 - (1.5)^2\]</div>
+<div class="formula">\[Var(X) = 0.75\]</div>
+<hr>
+<h2>Standard Deviation</h2>
+<p>Standard Deviation बताता है कि डेटा अपने Mean (औसत) से कितना फैला हुआ (spread) है।</p>
+<ul>
+    <li>Standard Deviation छोटा ⇒ डेटा Mean के पास-पास है।</li>
+    <li>Standard Deviation बड़ा ⇒ डेटा Mean से दूर-दूर फैला हुआ है।</li>
+</ul>
+<div class="formula">\[\sigma = \sqrt{\sigma^2}\]</div>
+<hr>
+<div class="formula">\[\sigma = \sqrt{ 0.75 }\]</div>
+<div class="formula">\[\sigma = 0.86602540378\]</div>
+<hr>
+<h3>Note :</h3>
+<ul>
+    <li>Mean = \(\mu\)</li>
+    <li>Variance = \(\sigma^2\)</li>
+    <li>Standard Deviation = \(\sigma\)</li>
+</ul>
+<hr>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

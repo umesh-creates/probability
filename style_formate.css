@@ -1,0 +1,32 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.formula {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.container {
+    width: 550px;
+}
+
+@media (max-width:552px) {
+    .container {
+        width: 90vw;
+    }
+}
+.bold{
+    font-weight: bold;
+}
+.center{
+    display: grid;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 19px;
+}

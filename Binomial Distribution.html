@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binomial Distribution</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_formate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Binomial Distribution (Discrete Value)</h1>
+        <hr>
+        <p>जब कोई प्रयोग (experiment) कई बार किया जाता है और हर बार केवल दो ही परिणाम संभव हों, तब Binomial Distribution का उपयोग किया जाता है।</p>
+        <p>दो परिणाम:</p>
+        <ul>
+            <li>Success</li>
+            <li>Failure</li>
+        </ul>
+        <hr>
+        <h2>Example</h2>
+        <p>सिक्का उछालना</p>
+        <ul>
+            <li>Head = Success = p</li>
+            <li>Tail = Failure = q</li>
+        </ul>
+        <ul>
+            <li>q = 1 - p</li>
+            <li>p = 1 - q</li>
+        </ul>
+        <p>यदि सिक्का 3 बार उछाला जाए, तो प्रश्न हो सकता है:</p>
+        <p><b>3 toss में ठीक 2 Head आने की probability क्या है?</b></p>
+        <p>ऐसे सवाल Binomial Distribution से हल होते हैं।</p><hr>
+        <h2>Find Binomial Distribution</h2>
+        <div class="formula">\[Binomial\ Theorem = (q + p)^n\]</div>
+        <hr>
+        <div class="formula">\[= \left( \frac{1}{2} + \frac{1}{2} \right)^3 = 1\]</div>
+        <hr>
+        <h2>Binomial PMF</h2>
+        <p>यही Binomial Distribution का मुख्य Formula है:</p>
+        <div class="formula">\[P(X = x) = {}^nC_x\ p^x\ q^{n-x}\]</div><hr>
+<h2>Example :</h2>
+<p>एक सिक्का 3 बार उछाला गया।</p>
+<p>निकालो:</p>
+<p><b>ठीक 2 Head आने की probability।</b></p>
+<hr>
+<div class="formula">\[P(X = 2) = {}^3C_2 \ \left( \frac{1}{2} \right)^2 \ \left( \frac{1}{2} \right)^{3-2}\]</div>
+<div class="formula">\[P(X = 2) = 3 \times \frac{1}{2} \times 
+    \frac{1}{2} \times \frac{1}{2} = \frac{3}{8} \]</div>
+    <hr>
+    <h2>Distribution Table</h2>
+    <p>यदि 3 बार coin toss करें:</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>X</th>
+                <th>P(X = x)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>1\8</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3\8</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3\8</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1\8</td>
+            </tr>
+        </tbody>
+    </table>
+<p>यह पूरा Binomial Probability Distribution है।</p>
+<hr>
+<h2>Mean</h2>
+<div class="formula">\[\mu = np\]</div>
+<h2>Example:</h2>
+<p>n = 3</p>
+<p>p = 1\4</p>
+<div class="formula">\[\mu = 3 \times \frac{1}{4} = \frac{3}{4}\]</div>
+<hr>
+<h2>Variance</h2>
+<p>Var(X) = \(\sigma^2\)</p>
+<div class="formula">\[Var(X) = npq\]</div>
+<h2>Example</h2>
+<p>n = 3</p>
+<p>p = \( \frac{1}{4} \)</p>
+<p>q = 1 - \(\frac{1}{4} = \frac{3}{4} \)</p>
+<div class="formula">\[\sigma^2 = 3 \times \frac{1}{4} \times \frac{3}{4} = \frac{9}{16}\]</div>
+<hr>
+<h2>Standard Deviation</h2>
+<div class="formula">\[\sigma = \sqrt{npq}\]</div>
+<h2>Example: </h2>
+<div class="formula">\[\sigma = \sqrt{\frac{9}{16}}\]</div>
+<div class="formula">\[\sigma = \frac{3}{4}\]</div>
+<hr>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</html>

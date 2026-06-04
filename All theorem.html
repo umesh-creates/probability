@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Probablity Theorem in short</title>
+    <link rel="stylesheet" href="style_formate.css">
+</head>
+<body>
+    <div class="container">
+<h1>All Probablity Theorem in Short</h1>
+<hr>
+
+
+<h2>1. Normal Probability</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+One ball is drawn at random. <br>
+Find the probability of getting a Red ball.</p>
+<hr>
+<div class="formula">\[P(Red) = \frac{3}{5}\]</div>
+<hr>
+
+<h2>2. Complementary Probability</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+One ball is drawn at random. <br>
+Find the probability of NOT getting a Red ball.</p>
+<hr>
+<div class="formula">\[P(Red^c) = 1 - \frac{3}{5} = \frac{2}{5}\]</div>
+<p><b>Note:</b> <br> \(P(Red^c) == P(Blue) = \frac{2}{5}\)</p>
+<hr>
+
+<h2>3. Combination Probability</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+Two balls are drawn together. <br>
+Find the probability that both balls are Red.</p>
+<hr>
+<div class="formula">\[P(both\ Red\ ball) = \frac{{}^3C_2}{{}^5C_3} = \frac{3}{10}\]</div>
+<hr>
+
+<h2>4. Addition Theorem</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+One ball is drawn at random. <br>
+Find the probability that the ball is Red OR Blue.</p>
+<hr>
+<div class="formula">\[P(Red \cup Blue) = \frac{3}{5} + \frac{2}{5} = \frac{5}{5} = 1\]</div>
+<hr>
+
+<h2>5. Multiplication Theorem</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+Two balls are drawn one after another <b>without replacement</b>. <br>
+Find the probability that both balls are Red.</p>
+<hr>
+<div class="formula">\[P(R \cap R) = \frac{3}{5} \times \frac{2}{4} = \frac{6}{20} = \frac{3}{10}\]</div>
+<hr>
+
+<h2>6. Conditional Probability</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+Two balls are drawn one after another <b>without replacement</b>. <br>
+If the first ball is Red, find the probability that the second ball is also Red.</p>
+<hr>
+<div class="formula">\[P(B|A) = \frac{P(A \cap B)}{P(A)}\]</div>
+<div class="formula">\[P(R_2| R_1) = \frac{P(R \cap R)}{P(R)} = \frac{\frac{3}{10}}{\frac{3}{5}} = \frac{3}{10} \times \frac{5}{3} = \frac{1}{2}\]</div>
+<hr>
+
+<h2>7. Bayes’ Theorem</h2>
+<p>Bag A contains 3 Red and 2 Blue balls. <br>
+Bag B contains 1 Red and 4 Blue balls. <br>
+ <br>
+One bag is chosen at random and one ball is drawn. <br>
+If the ball drawn is Red, find the probability that it came from Bag A.</p>
+<hr> 
+<div class="formula">\[P(A|R) = \frac{P(A)P(R|A)}{P(A)P(R|A) + P(B)P(B|R)}\]</div>
+<div class="formula">\[P(A|R) = \frac{\frac{1}{2} \times \frac{3}{5}}{\left( \frac{1}{2} \times \frac{3}{5} \right) + \left( \frac{1}{2} \times \frac{1}{5}\right)}\]</div>
+<div class="formula">\[P(A|R) = \frac{\frac{3}{10}}{\frac{4}{10}} = \frac{3}{4}\]</div>
+<hr>
+
+<h2>8. Bernoulli’s Theorem</h2>
+<p>A bag contains 3 Red and 2 Blue balls. <br>
+A ball is drawn 3 times with replacement. <br>
+Find the probability of getting exactly 2 Red balls.</p>
+<hr>
+<div class="formula">\[P(2\ Red) = {}^3C_2 \times \left( \frac{3}{5}\right)^2 \times \left( 1 - \frac{3}{5} \right)^{3-2}\]</div>
+<div class="formula">\[P(2\ Red) = 3 \times \frac{3}{5} \times \frac{3}{5} \times \frac{2}{5}\]</div>
+<div class="formula">\[P(2\ Red) = \frac{54}{124}\]</div>
+<hr>
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</html>
